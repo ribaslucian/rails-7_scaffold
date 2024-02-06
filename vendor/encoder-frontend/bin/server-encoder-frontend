@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Use a bash to run.
+# Copy to .bin/ rails folder.
+
+if ! command -v foreman &> /dev/null
+then
+    echo "Installing foreman..."
+    gem install foreman --no-document
+fi
+
+foreman start -f "vendor/encoder-frontend/Procfile.dev"
