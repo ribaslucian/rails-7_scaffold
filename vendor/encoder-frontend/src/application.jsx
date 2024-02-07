@@ -3,8 +3,6 @@
 // const element = <h1>Hello world, react</h1>;
 // ReactDOM.render(element, document.getElementById('root'));
 
-
-
 // Material TextField
 // import {MDCTextField} from '@material/textfield';
 // const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
@@ -16,10 +14,6 @@
 //     <MUIButton />,
 //     document.getElementById('mui')
 // );
-
-
-
-
 
 // import TWAdminMenu from '../components/TWAdminMenu';
 // ReactDOM.render(
@@ -45,4 +39,19 @@
 
 // import "./lib/views/b3_corporate_indicators/wallets/indicators";
 
-import bootstrap from 'bootstrap';
+// --
+
+// ↓ Modules imports
+// import bootstrap from 'bootstrap';
+import 'bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
+const bootstrap = require('bootstrap')
+
+// ↓ Application CSS
+import '../stylesheets/devise/new.css'
+
+
+// ↓ Application JS
+
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
